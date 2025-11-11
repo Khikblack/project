@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -sC -sV -p 21,22,80,443,3389 -oA service_recon 213.230.109.236" profile_name="" scanner="nmap" start="1762860181" startstr="Tue Nov 11 06:23:01 2025" version="7.95" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="5" services="21-22,80,443,3389"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-11 06:23 EST
+Nmap scan report for 213.230.109.236
+Host is up (0.0060s latency).
+
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           Pure-FTPd
+| ssl-cert: Subject: commonName=213.230.109.236/organizationName=BT-PANEL/stateOrProvinceName=Guangdong/countryName=CN
+| Not valid before: 2025-07-14T06:56:16
+|_Not valid after:  2035-04-13T06:56:16
+|_ssl-date: TLS randomness does not represent time
+22/tcp   open  ssh           OpenSSH 9.6p1 Ubuntu 3ubuntu13.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 a8:75:04:f4:b3:98:02:5d:7f:b0:eb:0c:1b:cb:a8:59 (ECDSA)
+|_  256 8e:e6:63:32:cb:c4:71:5e:a2:3d:af:7a:cc:b7:bd:89 (ED25519)
+80/tcp   open  http          nginx
+|_http-server-header: nginx
+|_http-title: 403 Forbidden
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions, RTSPRequest: 
+|     HTTP/1.0 302 Redirect
+|     Pragma: no-cache
+|     Cache-Control: no-cache
+|     Content-Length: 0
+|     Connection: close
+|_    Location: http://192.168.144.1:4080/nonauth/nohost.cs
+443/tcp  open  ssl/http      nginx
+| ssl-cert: Subject: commonName=camera.cspu.uz
+| Subject Alternative Name: DNS:camera.cspu.uz
+| Not valid before: 2025-09-16T21:34:16
+|_Not valid after:  2025-12-15T21:34:15
+| tls-alpn: 
+|   h2
+|   http/1.1
+|   http/1.0
+|_  http/0.9
+| http-title: Tizimga kirish
+|_Requested resource was /login
+|_ssl-date: TLS randomness does not represent time
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+|_ssl-date: 2025-11-11T11:25:24+00:00; 0s from scanner time.
+| ssl-cert: Subject: commonName=DESKTOP-0GPU170
+| Not valid before: 2025-08-21T07:37:50
+|_Not valid after:  2026-02-20T07:37:50
+| rdp-ntlm-info: 
+|   Target_Name: DESKTOP-0GPU170
+|   NetBIOS_Domain_Name: DESKTOP-0GPU170
+|   NetBIOS_Computer_Name: DESKTOP-0GPU170
+|   DNS_Domain_Name: DESKTOP-0GPU170
+|   DNS_Computer_Name: DESKTOP-0GPU170
+|   Product_Version: 10.0.19041
+|_  System_Time: 2025-11-11T11:25:09+00:00
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.95%I=7%D=11/11%Time=69131C9F%P=x86_64-pc-linux-gnu%r(Get
+SF:Request,A1,"HTTP/1\.0\x20302\x20Redirect\r\nPragma:\x20no-cache\r\nCach
+SF:e-Control:\x20no-cache\r\nContent-Length:\x200\r\nConnection:\x20close\
+SF:r\nLocation:\x20http://192\.168\.144\.1:4080/nonauth/nohost\.cs\r\n\r\n
+SF:")%r(HTTPOptions,A1,"HTTP/1\.0\x20302\x20Redirect\r\nPragma:\x20no-cach
+SF:e\r\nCache-Control:\x20no-cache\r\nContent-Length:\x200\r\nConnection:\
+SF:x20close\r\nLocation:\x20http://192\.168\.144\.1:4080/nonauth/nohost\.c
+SF:s\r\n\r\n")%r(RTSPRequest,A1,"HTTP/1\.0\x20302\x20Redirect\r\nPragma:\x
+SF:20no-cache\r\nCache-Control:\x20no-cache\r\nContent-Length:\x200\r\nCon
+SF:nection:\x20close\r\nLocation:\x20http://192\.168\.144\.1:4080/nonauth/
+SF:nohost\.cs\r\n\r\n")%r(FourOhFourRequest,A1,"HTTP/1\.0\x20302\x20Redire
+SF:ct\r\nPragma:\x20no-cache\r\nCache-Control:\x20no-cache\r\nContent-Leng
+SF:th:\x200\r\nConnection:\x20close\r\nLocation:\x20http://192\.168\.144\.
+SF:1:4080/nonauth/nohost\.cs\r\n\r\n");
+Service Info: OSs: Linux, Windows; CPE: cpe:/o:linux:linux_kernel, cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 144.86 seconds
+</output><host comment=""><status state="up"></status><address addr="213.230.109.236" vendor="" addrtype="ipv4"></address><hostnames></hostnames><ports><port portid="21" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="ftp" product="Pure-FTPd"></service></port><port portid="22" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="ssh" product="OpenSSH" version="9.6p1 Ubuntu 3ubuntu13.11" extrainfo="Ubuntu Linux; protocol 2.0"></service></port><port portid="80" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="http" product="nginx"></service></port><port portid="443" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="http" product="nginx"></service></port><port portid="3389" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="10" method="probed" name="ms-wbt-server" product="Microsoft Terminal Services"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1762860326" timestr="Tue Nov 11 06:25:26 2025"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

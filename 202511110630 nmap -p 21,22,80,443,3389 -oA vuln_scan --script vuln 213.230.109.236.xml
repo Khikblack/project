@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 21,22,80,443,3389 -oA vuln_scan --script vuln 213.230.109.236" profile_name="" scanner="nmap" start="1762860627" startstr="Tue Nov 11 06:30:27 2025" version="7.95" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="5" services="21-22,80,443,3389"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-11 06:30 EST
+Nmap scan report for yangi.cspu.uz (213.230.109.236)
+Host is up (0.0043s latency).
+
+PORT     STATE    SERVICE
+21/tcp   filtered ftp
+22/tcp   open     ssh
+80/tcp   filtered http
+443/tcp  open     https
+| http-fileupload-exploiter: 
+|   
+|     Couldn't find a file-type field.
+|   
+|_    Couldn't find a file-type field.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+| http-enum: 
+|   /login/: Login page
+|   /robots.txt: Robots file
+|   /1/: Potentially interesting folder
+|   /2/: Potentially interesting folder
+|   /3/: Potentially interesting folder
+|   /4/: Potentially interesting folder
+|   /5/: Potentially interesting folder
+|   /6/: Potentially interesting folder
+|   /7/: Potentially interesting folder
+|   /8/: Potentially interesting folder
+|   /a/: Potentially interesting folder
+|   /b/: Potentially interesting folder
+|   /c/: Potentially interesting folder
+|   /d/: Potentially interesting folder
+|   /e/: Potentially interesting folder
+|   /f/: Potentially interesting folder
+|   /g/: Potentially interesting folder
+|   /h/: Potentially interesting folder
+|   /i/: Potentially interesting folder
+|   /j/: Potentially interesting folder
+|   /k/: Potentially interesting folder
+|   /l/: Potentially interesting folder
+|   /m/: Potentially interesting folder
+|   /n/: Potentially interesting folder
+|   /o/: Potentially interesting folder
+|   /p/: Potentially interesting folder
+|   /q/: Potentially interesting folder
+|   /r/: Potentially interesting folder
+|   /s/: Potentially interesting folder
+|   /t/: Potentially interesting folder
+|   /u/: Potentially interesting folder
+|   /v/: Potentially interesting folder
+|   /x/: Potentially interesting folder
+|   /y/: Potentially interesting folder
+|   /application/: Potentially interesting folder
+|   /I/: Potentially interesting folder
+|_  /marketing/: Potentially interesting folder
+3389/tcp open     ms-wbt-server
+
+Host script results:
+| firewall-bypass: 
+|_  Firewall vulnerable to bypass through ftp helper. (IPv4)
+
+Nmap done: 1 IP address (1 host up) scanned in 1676.11 seconds
+</output><host comment=""><status state="up"></status><address addr="213.230.109.236" vendor="" addrtype="ipv4"></address><hostnames><hostname name="yangi.cspu.uz" type="PTR"></hostname></hostnames><ports><port portid="21" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="ftp"></service></port><port portid="22" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="ssh"></service></port><port portid="80" protocol="tcp"><state state="filtered" reason="no-response" reason_ttl="0"></state><service conf="3" method="table" name="http"></service></port><port portid="443" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="https"></service></port><port portid="3389" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="ms-wbt-server"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1762862303" timestr="Tue Nov 11 06:58:23 2025"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>

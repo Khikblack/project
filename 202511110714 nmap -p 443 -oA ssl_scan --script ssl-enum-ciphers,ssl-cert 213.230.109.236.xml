@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?><nmaprun args="nmap -p 443 -oA ssl_scan --script ssl-enum-ciphers,ssl-cert 213.230.109.236" profile_name="" scanner="nmap" start="1762863286" startstr="Tue Nov 11 07:14:46 2025" version="7.95" xmloutputversion="1.04"><scaninfo type="syn" protocol="tcp" numservices="1" services="443"></scaninfo><verbose level="0"></verbose><debugging level="0"></debugging><output type="interactive">Starting Nmap 7.95 ( https://nmap.org ) at 2025-11-11 07:14 EST
+Nmap scan report for yangi.cspu.uz (213.230.109.236)
+Host is up (0.0016s latency).
+
+PORT    STATE SERVICE
+443/tcp open  https
+| ssl-cert: Subject: commonName=camera.cspu.uz
+| Subject Alternative Name: DNS:camera.cspu.uz
+| Issuer: commonName=R13/organizationName=Let's Encrypt/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2025-09-16T21:34:16
+| Not valid after:  2025-12-15T21:34:15
+| MD5:   6f55:7197:f45b:4cb3:1033:89a3:3fd7:34a9
+|_SHA-1: 8f8b:9157:f7e3:35f9:0a5b:314f:8b38:7d96:3ca1:b2c1
+
+Nmap done: 1 IP address (1 host up) scanned in 25.53 seconds
+</output><host comment=""><status state="up"></status><address addr="213.230.109.236" vendor="" addrtype="ipv4"></address><hostnames><hostname name="yangi.cspu.uz" type="PTR"></hostname></hostnames><ports><port portid="443" protocol="tcp"><state state="open" reason="syn-ack" reason_ttl="128"></state><service conf="3" method="table" name="https"></service></port></ports><os></os><uptime seconds="" lastboot=""></uptime><tcpsequence index="" difficulty="" values=""></tcpsequence><ipidsequence class="" values=""></ipidsequence><tcptssequence class="" values=""></tcptssequence></host><runstats><finished time="1762863312" timestr="Tue Nov 11 07:15:12 2025"></finished><hosts up="1" down="0" total="1"></hosts></runstats></nmaprun>
